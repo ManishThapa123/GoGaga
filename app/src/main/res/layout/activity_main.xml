@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e8eaf6"
+    tools:context=".MainActivity">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:iss_auto_cycle="true"
+        app:iss_placeholder="@android:color/transparent"
+        app:iss_corner_radius="5"
+        app:iss_period="1000"
+        app:iss_delay="0"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/image_slider"
+        android:text=" Manish, 25, Taurus"
+        android:id="@+id/textView1"
+        android:textSize="20dp"
+        android:padding="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/textView1"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView1"
+        android:text=" Delhi, India"
+        android:textSize="20dp"
+        android:padding="10dp"/>
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/textView2"
+        android:layout_height="1dp"
+        android:id="@+id/view2"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="20dp"/>
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="460dp"
+        android:src="@drawable/ic_music"
+        />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/navDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="170dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="450dp"
+            android:orientation="horizontal"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary" />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#cb546e"
+                app:itemIconSize="24dp"
+                app:itemIconTint="@drawable/bottom_nav_selector"
+                app:itemTextColor="#ff8c86"
+                app:labelVisibilityMode="auto"
+                app:menu="@menu/bottom_navigation_menu" />
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/navigation_header" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+

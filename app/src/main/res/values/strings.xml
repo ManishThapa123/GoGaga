@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Go Gaga</string>
+    <string name="home_title">Home</string>
+    <string name="messages_title">Messages</string>
+    <string name="notification_title">Notification</string>
+    <string name="profile_title">Profile</string>
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_closed">Drawer Closed</string>
+
+</resources>
